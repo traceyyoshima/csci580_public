@@ -29,3 +29,7 @@ observations of the robot that was placed into this world and wandered around fo
 test.debug
 
 the true route taking by the robot and other additional useful bits of info
+
+optionally takes 1 additonal input [debug] to output info to console during run time
+
+ie: python3 create_world.py 20 10 10 1
