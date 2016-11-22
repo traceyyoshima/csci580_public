@@ -3,7 +3,8 @@ create_world.py for robot localization with visualization
 
 
 run from command line using python3
-reads input from command line in the form of [World Width] [World Height] [No.Observations]
+reads input from command line in the form of 
+python3 createworld.py [World Width] [World Height] [No.Observations]
 example command:
 python3 create_world.py 20 10 10
 would create a world size 20 wide by 10 tall
