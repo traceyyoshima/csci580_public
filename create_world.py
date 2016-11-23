@@ -7,44 +7,78 @@ global col
 def world_to_string(x):
     obs = ""
     # check NW
+    error = random.randint(0,100)
     if x >= 128:
         x -= 128
+        if error >= 5:
+            obs += "A"
+    elif error < 5:
         obs += "A"
 
     # check N
+    error = random.randint(0,100)
     if x >= 64:
         x -= 64
+        if error >= 5:
+            obs += "N"
+    elif error < 5:
         obs += "N"
 
     # check NE
+    error = random.randint(0,100)
     if x >= 32:
         x -= 32
+        if error >= 5:
+            obs += "B"
+    elif error < 5:
         obs += "B"
 
     # check E
+    error = random.randint(0,100)
     if x >= 16:
         x -= 16
+        if error >= 5:
+            obs += "E"
+    elif error < 5:
         obs += "E"
 
     # check SE
+    error = random.randint(0,100)
     if x >= 8:
         x -= 8
+        if error >= 5:
+            obs += "C"
+    elif error < 5:
         obs += "C"
 
     # check S
+    error = random.randint(0,100)
     if x >= 4:
         x -= 4
+        if error >= 5:
+            obs += "S"
+    elif error < 5:
         obs += "S"
 
     # check SW
+    error = random.randint(0,100)
     if x >= 2:
         x -= 2
+        if error >= 5:
+            obs += "D"
+    elif error < 5:
         obs += "D"
 
     # check W
+    error = random.randint(0,100)
     if x >= 1:
         x -= 1
+        if error >= 5:
+            obs += "W"
+    elif error < 5:
         obs += "W"
+
+
     return obs
 
 if len(sys.argv) > 3:
