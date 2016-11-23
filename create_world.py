@@ -1,6 +1,9 @@
 import random
 import sys
 
+global row
+global col
+
 def world_to_string(x):
     obs = ""
     # check NW
@@ -220,23 +223,23 @@ if len(sys.argv) > 3:
             longest += 1
         while True:
             go_north = random.randint(0,1)
-            go_west = 0
-            go_east = random.randint(0,1)
+            go_west  = 0
+            go_east  = random.randint(0,1)
             go_south = 0
             temp_row = row;
             temp_col = col;
             went = ""
-            if go_north:
+            if go_north == 1:
                 temp_row = row - 1
             else:
                 go_south = random.randint(0,1)
-                if go_south:
+                if go_south == 1:
                     temp_row = row + 1
-            if go_east:
+            if go_east == 1:
                 temp_col = col - 1
             else:
                 go_west = random.randint(0,1)
-                if go_west:
+                if go_west == 1:
                     temp_col = col + 1
             if not (temp_row == row and temp_col == col):
                 if go_north:
@@ -255,7 +258,7 @@ if len(sys.argv) > 3:
                     went += "East"
                 elif go_west:
                     went += "west"
-                if temp_row >= 0 and temp_row < width and temp_col >= 0 and temp_col < height:
+                if temp_row >= 0 and temp_row < height and temp_col >= 0 and temp_col < width:
                     if matrix[temp_row][temp_col] == 0:
                         test_debug_file.write("Went: " + went + "\n")
                         row = temp_row
