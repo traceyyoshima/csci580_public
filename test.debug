@@ -1,0 +1,14 @@
+My World: 
+0 0 0 0 0 
+0 0 1 1 0 
+1 0 0 1 0 
+@time[0] @ matrix[0][2] Went: East
+@time[1] @ matrix[0][1] Went: west
+@time[2] @ matrix[0][2] Went: East
+@time[3] @ matrix[0][1] Went: SouthEast
+@time[4] @ matrix[1][0] Went: SouthWest
+@time[5] @ matrix[2][1] Went: NorthEast
+Journey: 
+X    1,3  0,2  X    X    
+4    X    X    X    X    
+X    5    X    X    X    
