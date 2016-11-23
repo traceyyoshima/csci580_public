@@ -85,14 +85,14 @@ if len(sys.argv) > 3:
     # | A  | N   | B  | E  | C  | S  | D  | W  |
     # | NW | N   | NE | E  | SE | S  | SW | W  |
     # which can be represented as a 8 bit binary number
-    # 00000001 = 128 = A
-    # 00000010 =  64 = N
-    # 00000100 =  32 = B
-    # 00001000 =  16 = E
-    # 00010000 =   8 = C
-    # 00100000 =   4 = S
-    # 01000000 =   2 = D
-    # 10000000 =   1 = W
+    # 10000000 = 128 = A
+    # 01000000 =  64 = N
+    # 00100000 =  32 = B
+    # 00010000 =  16 = E
+    # 00001000 =   8 = C
+    # 00000100 =   4 = S
+    # 00000010 =   2 = D
+    # 00000001 =   1 = W
     # each obsevation of a wall adds to total of myworld[i][j]
     for i in range(0,height):
         for j in range(0,width):
